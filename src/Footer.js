@@ -7,9 +7,9 @@ export class Footer extends React.Component {
         return(
             <div className="footer">
                 <div className="sum">0 items</div>
-                <div className="all">All</div>
-                <div className="active">Active</div>
-                <div className="completed">Component</div>
+                <div className="all"><button className="all-btn">All</button></div>
+                <div className="active"><button className="all-btn">Active</button></div>
+                <div className="completed"><button className="completed-btn">Completed</button></div>
             </div>
         );
     }
