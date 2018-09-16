@@ -11,6 +11,14 @@ export class Header extends React.Component {
         this.props.addTask(todoAdd);
     }
 
+    doneTask(task_id){
+
+    }
+
+    removeTask(task_id){
+        
+    }
+
     render(){
     
         return(
@@ -18,7 +26,7 @@ export class Header extends React.Component {
                 <h3 className="center">TODO List</h3>
                 <div className="header">
                     <form onSubmit={ this.addTask }>
-                        <input type="text" id="todo-add" className="todo-add-input" placeholder="What needs to be done?" />
+                        <input type="text" id="todo-add" autoComplete="off" className="todo-add-input" placeholder="What needs to be done?" required="required" />
                         <button className="add-button" onClick={ this.addTask.bind(this) }>+</button>
                     </form>
                 </div>
