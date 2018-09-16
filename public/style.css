@@ -1,4 +1,4 @@
-.container {
+	.container {
 		height: 100%;
 		width: 350px;
 		margin: 50px auto;
@@ -9,6 +9,7 @@
 		font-family: arial;
 		cursor: pointer;
 	}
+
 	.header {
 		height: 100px;
 		width: 350px;
@@ -63,23 +64,33 @@
 	}
 	
 	.content {
-		height: 250px;
-		width: 350px;
+		height: 100%;
+		width: 340px;
+		border-radius: 10px;
+		background-color: #fff;
+		-webkit-box-shadow: 4px 4px 12px -2px rgba(89,82,89,1);
+		-moz-box-shadow: 4px 4px 12px -2px rgba(89,82,89,1);
+		box-shadow: 4px 4px 6px -2px rgba(89,82,89,1);
+		margin-top: 10px; 
+		margin-bottom: 10px;
+		padding: 5px;
 	}
 	
 	.content ul {
 		padding-left: 0;
 		margin-top: 30px;
 	}
+	
 	.content ul li {
 		padding-left: 0;
+		padding-bottom: 5px;
 		margin-top: 10px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		border: 1px;
 		border-bottom-style: solid;
-		border-bottom-color: #f5f5f5;  
+		border-bottom-color: #f5f5f5;
 	}
 
 	.isCompleted {
@@ -89,12 +100,13 @@
 		border-radius: 50px;
 		border: 3px solid #a5d6a7;
 		color: #fff;
+		position:absolute;
+		margin-left: 290px;
 	}
 
 	.footer {
 		height: 85px;
 		width: 350px;
-		background-color: green;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -107,13 +119,14 @@
 		border-right-color: gray;
 	}
 
-	.sum , .all , .active, .completed {
+	.sum , .all , .actives, .completed {
 		height: 85px;
 		width: 350px;
 		background-color: #fff;
 		line-height: 85px;
 		transition: all .3s ease;
 	}
+
 	.all-btn, .active-btn, .completed-btn{
 		border: none;
 		background: transparent;
@@ -123,7 +136,7 @@
 		cursor: pointer;
 		transition: all .2s ease;
 	} 
-	
+
 	.all-btn:hover ,.active-btn:hover, .completed-btn:hover {
 		background-color: #a5d6a7;
 		color: #fff;
@@ -132,6 +145,23 @@
 	.all-btn:focus ,.active-btn:focus, .completed-btn:focus {
 		outline: none;
 	}
+
 	.center {
 		text-align: center;
+	}
+
+	.passive  {
+		text-decoration: line-through;
+		color: red;
+	}
+
+	.active {
+		color: black;
+	}
+
+	.active + .isCompleted::after {
+		content: "+";
+		font-size: 38px;
+		line-height: 24px;
+		color: #a5d6a7;
 	}
