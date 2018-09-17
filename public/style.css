@@ -119,15 +119,21 @@
 		border-right-color: gray;
 	}
 
-	.sum , .all , .actives, .completed {
+	.sum, 
+	.all, 
+	.actives, 
+	.completed {
 		height: 85px;
 		width: 350px;
 		background-color: #fff;
 		line-height: 85px;
 		transition: all .3s ease;
+		list-style: none;
 	}
 
-	.all-btn, .active-btn, .completed-btn{
+	.all-btn, 
+	.active-btn, 
+	.completed-btn {
 		border: none;
 		background: transparent;
 		height: 40px;
@@ -137,7 +143,7 @@
 		transition: all .2s ease;
 	} 
 
-	.all-btn:hover ,.active-btn:hover, .completed-btn:hover {
+	.all:hover ,.actives:hover, .completed:hover {
 		background-color: #a5d6a7;
 		color: #fff;
 	}
@@ -151,17 +157,22 @@
 	}
 
 	.passive  {
+		color: black;
+	}
+
+	.Completed {
 		text-decoration: line-through;
 		color: red;
 	}
 
-	.active {
-		color: black;
-	}
-
-	.active + .isCompleted::after {
+	.Completed + .isCompleted::after {
 		content: "+";
 		font-size: 38px;
 		line-height: 24px;
 		color: #a5d6a7;
+	}
+
+	.active {
+		background-color: #a5d6a7;
+		color: #fff;		
 	}
