@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {TodoList} from './TodoList';
 import {Header} from './Header';
 import {Content} from './Content';
-import {Footer} from './Footer';
 
 class App extends Component {
   
@@ -28,11 +27,11 @@ class App extends Component {
 
     let updateList = this.state.tasks;
 
-    let newStatus = "active";
+    let newStatus = "Completed";
 
     let currentStatus = updateList[task_id].status;
 
-    if(currentStatus === "active"){
+    if(currentStatus === "Completed"){
       newStatus = "passive";
     }
 
@@ -60,7 +59,6 @@ class App extends Component {
       <div>
         <Header addTask= { this.addTask }></Header>
         <Content tasks = { this.state.tasks } doneTask = { this.doneTask } removeTask = { this.removeTask }></Content>
-        <Footer />
         <TodoList />
       </div>
     );
